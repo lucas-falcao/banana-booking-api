@@ -1,0 +1,6 @@
+@Banana.Booking.Api_HostAddress = http://localhost:5232
+
+GET {{Banana.Booking.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
