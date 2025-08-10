@@ -21,9 +21,9 @@ namespace Banana.Booking.Api.Models
         [Required]
         public int QuantidadeDePessoas { get; set; }
         [Required]
-        public DateTime StartTime { get; set; }
+        public DateTime HoraInicio { get; set; }
         [Required]
-        public DateTime EndTime { get; set; }
+        public DateTime HoraFim { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 

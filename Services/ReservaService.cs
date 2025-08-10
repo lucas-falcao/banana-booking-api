@@ -55,7 +55,7 @@ namespace Banana.Booking.Api.Services
         {
             var reservas = await GetReservas();
             
-            bool choqueHorario = reservas.Any(r => reserva.SalaDeReuniaoId == r.SalaDeReuniaoId && r.Id != reserva.Id && (reserva.StartTime <= r.StartTime && reserva.EndTime >= r.EndTime));     // Apenas o começo.
+            bool choqueHorario = reservas.Any(r => reserva.SalaDeReuniaoId == r.SalaDeReuniaoId && r.Id != reserva.Id && (reserva.HoraInicio <= r.HoraInicio && reserva.HoraFim >= r.HoraFim));     // Apenas o começo.
             return !choqueHorario;
         }
     }

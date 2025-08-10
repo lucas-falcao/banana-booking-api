@@ -21,7 +21,7 @@ namespace Banana.Booking.Api.Data
                 .HasForeignKey(reserva => reserva.SalaDeReuniaoId);
 
             modelBuilder.Entity<Reserva>()
-                .HasIndex(reserva => new {reserva.SalaDeReuniaoId, reserva.StartTime, reserva.EndTime})
+                .HasIndex(reserva => new {reserva.SalaDeReuniaoId, reserva.HoraInicio, reserva.HoraFim})
                 .IsUnique();
 
             modelBuilder.Entity<SalaDeReuniao>().ToTable("Salas");

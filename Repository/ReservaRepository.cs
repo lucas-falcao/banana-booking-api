@@ -38,8 +38,8 @@ namespace Banana.Booking.Api.Repository
         {
             await _db.Reservas.Where(reserva => reserva.Id == reservaId)
                 .ExecuteUpdateAsync(setters => setters
-                .SetProperty(r => r.StartTime, reserva.StartTime)
-                .SetProperty(r => r.EndTime, reserva.EndTime)
+                .SetProperty(r => r.HoraInicio, reserva.HoraInicio)
+                .SetProperty(r => r.HoraFim, reserva.HoraFim)
                 .SetProperty(r => r.QuantidadeDePessoas, reserva.QuantidadeDePessoas)
                 //.SetProperty(r => r.SalaDeReuniao, reserva.SalaDeReuniao)
                 .SetProperty(r => r.SalaDeReuniaoId, reserva.SalaDeReuniaoId)
