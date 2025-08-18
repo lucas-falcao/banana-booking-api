@@ -13,7 +13,6 @@ namespace Banana.Booking.Api.Models
         [ForeignKey("SalaDeReuniaoId")]
         public virtual SalaDeReuniao? SalaDeReuniao { get; set; }
 
-        // Se der tempo para auth será int. Se não, será string
         [Required]
         public string Responsavel { get; set; } = string.Empty;
 
